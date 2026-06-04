@@ -1,12 +1,11 @@
 #include <iostream>
 #include <fstream>
 #include <string>
-#include <limits>
+//#include <limits>
 using namespace std;
 
 /*=================================
-        ESTRUCTURA PRODUCTO
-=================================*/
+ESTRUCTURA PRODUCTO*/
 
 struct Producto
 {
@@ -17,9 +16,8 @@ struct Producto
    Producto *siguiente;
 };
 
-/*=================================
-        ESTRUCTURA PEDIDO
-=================================*/
+/*============================
+ESTRUCTURA PEDIDO*/
 struct Pedido
 {
     string cliente;
@@ -29,9 +27,7 @@ struct Pedido
     Pedido *siguiente;
 };
 
-/*=================================
-        ESTRUCTURA PILA
-=================================*/
+/*======ESTRUCTURA PILA*++++++*/
 struct Accion
 {
     string descripcion;
@@ -39,9 +35,7 @@ struct Accion
     Accion *siguiente;
 };
 
-/*=================================
-      VARIABLES GLOBALES
-=================================*/
+/*====VARIABLES GLOBALES=+++++++=*/
 
 Producto *inicio = NULL;
 
@@ -56,14 +50,13 @@ Pedido *finalPendiente = NULL;
 /* Pila */
 Accion *tope = NULL;
 
-/*=================================
-        VALIDACIONES
-=================================*/
+/*=================
+	VALIDACIONES****=====*/
 
 void limpiarBuffer()
 {
     cin.clear();
-    cin.ignore(numeric_limits<streamsize>::max(), '\n');
+    //cin.ignore(numeric_limits<streamsize>::max(), '\n');
 }
 
 float leerPrecio()
@@ -127,8 +120,7 @@ int leerCantidad()
 }
 
 /*=================================
-     VERIFICAR CODIGO REPETIDO
-=================================*/
+    VERIFICAR CODIGO REPETIDO====*/
 
 bool codigoExiste(string codigo)
 {
@@ -981,3 +973,4 @@ int main()
 
     }while(op != 4);
 }
+
