@@ -938,7 +938,7 @@ void menuHistorial()
    MENU PRINCIPAL
 =================================*/
 
-int main()
+void menu()
 {
     int op;
 
@@ -980,4 +980,14 @@ int main()
         }
 
     }while(op != 4);
+}
+int main()
+{
+    cargarProductos();
+
+    menu();
+
+    guardarProductos();
+
+    return 0;
 }
